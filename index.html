@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Examen de recuperacion</title>
+</head>
+<body>
+
+    
+    <nav class="navbar bg-primary" data-bs-theme="dark">
+        <!-- Navbar content -->
+    
+    </nav>
+    
+    <div class="container text-center mt-4">
+        <h2>Evaluar Ecuación General de 2º Grado</h2>
+        <hr>
+        <h4>Fomula para sacar x1 y x2</h4>
+            <h1>x=
+                −b±
+                √b
+                2
+                −4ac/2a
+                </h1>
+        <div id="tabla" class="container mt-4"></div>
+
+        <!-- formulario -->
+        <div class="container text-center" id="formulario-container">
+            <form id="formulario">
+                <div class="row align-items-start mb-3">
+                    <div class="col">
+                        <h3>Coeficiente (a)</h3>
+                        <input class="form-control" type="text" id="coeficiente_a" name="coeficiente_a" placeholder="Ingresa el valor del coeficiente a">
+                        <span class="text-danger" id="error_a"></span>
+                    </div>
+                    <div class="col">
+                        <h3>Coeficiente (b)</h3>
+                        <input class="form-control" type="text" id="coeficiente_b" name="coeficiente_b" placeholder="Ingresa el valor del coeficiente b">
+                        <span class="text-danger" id="error_b"></span>
+                    </div>
+                    <div class="col">
+                        <h3>Coeficiente (c)</h3>
+                        <input class="form-control" type="text" id="coeficiente_c" name="coeficiente_c" placeholder="Ingresa el valor del coeficiente c">
+                        <span class="text-danger" id="error_c"></span>
+                    </div>
+                </div>
+<br>
+<br>
+                <!-- boton -->
+                <div class="row justify-content-center mb-4">
+                    <div class="col-sm-4">
+                        <button type="submit" class="btn btn-outline-info">Evaluar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+<br>
+<br>
+<br>
+    <footer class="navbar bg-primary text-white text-center py-3 mt-4">
+        <p>&copy; Melgar Angeles Gabriela Sarahi  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   &copy;Grupo: IC-31M</p>
+    </footer>
+
+    <script src="css/bootstrap.min.css"></script>
+    <script src="recu.js"></script>
+</body>
+</html>

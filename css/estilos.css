@@ -1,0 +1,72 @@
+/* styles.css */
+body {
+    background: linear-gradient(to right, #f0f8ff, #e6e6fa);
+    font-family: Arial, sans-serif;
+    color: #333333;
+}
+
+h2 {
+    color: #4b0082;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+}
+
+h4 {
+    color: #8a2be2;
+    font-family: 'Times New Roman', serif;
+}
+
+.btn-primary {
+    background-color: #4b0082;
+    border-color: #4b0082;
+    font-family: 'Verdana', sans-serif;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #3a0071;
+    border-color: #3a0071;
+}
+
+.table-dark {
+    background-color: #4b0082;
+    color: white;
+}
+
+.bg-primary {
+    background-color: #4b0082 !important;
+}
+
+.text-primary {
+    color: #4b0082 !important;
+}
+
+.text-info {
+    color: #8a2be2 !important;
+}
+
+.text-success {
+    color: #228B22 !important;
+}
+
+.text-danger {
+    color: #ff4500;
+}
+
+/* Additional styles for font and background colors */
+p, span, div, input, button {
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    background: linear-gradient(to bottom, #ffffff, #f0f8ff);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+footer {
+    background-color: #4b0082;
+    color: white;
+    padding: 10px;
+    font-family: 'Courier New', monospace;
+}
