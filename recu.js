@@ -5,9 +5,9 @@ formulario.addEventListener('submit', (event) => {
     event.preventDefault();
 
     // Coeficientes
-    let coeficiente_a = document.querySelector("#coeficiente_a");
-    let coeficiente_b = document.querySelector("#coeficiente_b");
-    let coeficiente_c = document.querySelector("#coeficiente_c");
+    let c_a = document.querySelector("#coeficiente_a");
+    let c_b = document.querySelector("#coeficiente_b");
+    let c_c = document.querySelector("#coeficiente_c");
     
     // Errores
     let error_a = document.querySelector("#error_a");
@@ -15,9 +15,9 @@ formulario.addEventListener('submit', (event) => {
     let error_c = document.querySelector("#error_c");
 
     // Obtener valores de los coeficientes y limpiar espacios
-    let a = coeficiente_a.value.trim();
-    let b = coeficiente_b.value.trim();
-    let c = coeficiente_c.value.trim();
+    let a = c_a.value.trim();
+    let b = c_b.value.trim();
+    let c = c_c.value.trim();
     
     // Variable de control para errores
     let centinela = false; 
@@ -103,8 +103,8 @@ let imprimir = (a, b, c, x1, x2) => {
     msg += `<td>${a}</td>`;
     msg += `<td>${b}</td>`;
     msg += `<td>${c}</td>`;
-    msg += `<td>${x1 !== undefined ? x1.toFixed(2) : 'N/A'}</td>`;
-    msg += `<td>${x2 !== undefined ? x2.toFixed(2) : 'N/A'}</td>`;
+    msg += `<td>${x1}</td>`;
+    msg += `<td>${x2}</td>`;
     msg += "</tr>";
     msg += "</tbody></table>";
     msg += "<button class='btn btn-primary mt-4' onclick='regresar()'>Regresar</button>";
