@@ -27,17 +27,17 @@ formulario.addEventListener('submit', (event) => {
 
     // Validaciones de entrada
     if (!a || isNaN(a)) {
-        msge_a = "Debes de ingresar un número válido para el coeficiente a";
+        msge_a = "Ingresa un valor numerico que sea positivo o negativo";
         centinela = true;
     }
 
     if (!b || isNaN(b)) {
-        msge_b = "Debes de ingresar un número válido para el coeficiente b";
+        msge_b = "Ingresa un valor numerico que sea positivo o negativo";
         centinela = true;
     }
 
     if (!c || isNaN(c)) {
-        msge_c = "Debes de ingresar un número válido para el coeficiente c";
+        msge_c = "Ingresa un valor numerico que sea positivo o negativo";
         centinela = true;
     }
 
@@ -61,7 +61,14 @@ formulario.addEventListener('submit', (event) => {
 
     // Validar el discriminante
     if (discriminante < 0) {
-        alert("La ecuación no tiene solución porque la raiz es negativa");
+        let msg = "La ecuación no tiene solución porque la raiz es negativa";
+        let mensajeHTML = `<p style="color: red;">${msg}</p>`;
+        mensajeHTML += "<button class='btn btn-primary mt-4' onclick='regresar()'>Regresar </button>"; // Botón Regresar
+        tabla.innerHTML = mensajeHTML; // Mostrar el mensaje en rojo en lugar de la tabla
+    
+        // Ocultar el contenedor del formulario
+        document.getElementById('formulario-container').style.display = 'none';
+    
         return;
     }
 
@@ -81,7 +88,7 @@ formulario.addEventListener('submit', (event) => {
 
 // Función para imprimir la tabla con los coeficientes y resultados
 let imprimir = (a, b, c, x1, x2) => {
-    let msg = "<table class='container table table-bordered mt-4'>";
+    let msg = "<table class='table-primary container  mt-4'>";
     msg += "<thead>";
     msg += "<tr>";
     msg += "<th class='table-dark'>Coeficiente a</th>";
