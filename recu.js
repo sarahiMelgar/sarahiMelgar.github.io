@@ -26,17 +26,17 @@ formulario.addEventListener('submit', (event) => {
     let msge_c = "";
 
     // Validaciones de entrada
-    if (!a || !Number.isInteger(parseFloat(a))) {
+    if (!a || !/^-?\d+$/.test(a)) {
         msge_a = "Ingresa un valor entero positivo o negativo";
         centinela = true;
     }
 
-    if (!b || !Number.isInteger(parseFloat(b))) {
+    if (!b || !/^-?\d+$/.test(b)) {
         msge_b = "Ingresa un valor entero positivo o negativo";
         centinela = true;
     }
 
-    if (!c || !Number.isInteger(parseFloat(c))) {
+    if (!c || !/^-?\d+$/.test(c)) {
         msge_c = "Ingresa un valor entero positivo o negativo";
         centinela = true;
     }
