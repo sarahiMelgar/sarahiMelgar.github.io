@@ -29,15 +29,24 @@ formulario.addEventListener('submit', (event) => {
     if (!a || !/^-?\d+$/.test(a)) {
         msge_a = "Ingresa un valor entero positivo o negativo";
         centinela = true;
+    } else if (/\./.test(a)) {
+        msge_a = "No se permiten números decimales";
+        centinela = true;
     }
 
     if (!b || !/^-?\d+$/.test(b)) {
         msge_b = "Ingresa un valor entero positivo o negativo";
         centinela = true;
+    } else if (/\./.test(b)) {
+        msge_b = "No se permiten números decimales";
+        centinela = true;
     }
 
     if (!c || !/^-?\d+$/.test(c)) {
         msge_c = "Ingresa un valor entero positivo o negativo";
+        centinela = true;
+    } else if (/\./.test(c)) {
+        msge_c = "No se permiten números decimales";
         centinela = true;
     }
 
