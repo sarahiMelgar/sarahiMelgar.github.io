@@ -2,7 +2,7 @@ let formulario = document.querySelector("#formulario");
 let tabla = document.querySelector("#tabla");
 
 formulario.addEventListener('submit', (event) => {
-    event.preventDefault(); 
+    event.preventDefault();
 
     // Coeficientes
     let c_a = document.querySelector("#coeficiente_a");
