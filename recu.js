@@ -8,7 +8,7 @@ formulario.addEventListener('submit', (event) => {
     let c_a = document.querySelector("#coeficiente_a");
     let c_b = document.querySelector("#coeficiente_b");
     let c_c = document.querySelector("#coeficiente_c");
-    
+
     // Errores
     let error_a = document.querySelector("#error_a");
     let error_b = document.querySelector("#error_b");
@@ -20,24 +20,24 @@ formulario.addEventListener('submit', (event) => {
     let c = c_c.value.trim();
     
     // Variable de control para errores
-    let centinela = false; 
+    let centinela = false;
     let msge_a = "";
     let msge_b = "";
     let msge_c = "";
 
     // Validaciones de entrada
-    if (!a || isNaN(a)) {
-        msge_a = "Ingresa un valor numerico que sea positivo o negativo";
+    if (!a || !Number.isInteger(parseFloat(a))) {
+        msge_a = "Ingresa un valor entero positivo o negativo";
         centinela = true;
     }
 
-    if (!b || isNaN(b)) {
-        msge_b = "Ingresa un valor numerico que sea positivo o negativo";
+    if (!b || !Number.isInteger(parseFloat(b))) {
+        msge_b = "Ingresa un valor entero positivo o negativo";
         centinela = true;
     }
 
-    if (!c || isNaN(c)) {
-        msge_c = "Ingresa un valor numerico que sea positivo o negativo";
+    if (!c || !Number.isInteger(parseFloat(c))) {
+        msge_c = "Ingresa un valor entero positivo o negativo";
         centinela = true;
     }
 
@@ -51,20 +51,20 @@ formulario.addEventListener('submit', (event) => {
         return; 
     }
 
-    // Convertir los valores a números
-    let aNum = parseFloat(a);
-    let bNum = parseFloat(b);
-    let cNum = parseFloat(c);
+    // Convertir los valores a números enteros
+    let aNum = parseInt(a);
+    let bNum = parseInt(b);
+    let cNum = parseInt(c);
 
     // Calcular el discriminante
     let discriminante = bNum * bNum - 4 * aNum * cNum;
 
     // Validar el discriminante
     if (discriminante < 0) {
-        let msg = "La ecuación no tiene solución porque la raiz es negativa";
+        let msg = "La ecuación no tiene solución porque la raíz es negativa";
         let mensajeHTML = `<p style="color: red;">${msg}</p>`;
-        mensajeHTML += "<button class='btn btn-primary mt-4' onclick='regresar()'>Regresar </button>"; // Botón Regresar
-        tabla.innerHTML = mensajeHTML; // Mostrar el mensaje en rojo en lugar de la tabla
+        mensajeHTML += "<button class='btn btn-primary mt-4' onclick='regresar()'>Regresar</button>";
+        tabla.innerHTML = mensajeHTML; // Mostrar el mensaje en lugar de la tabla
     
         // Ocultar el contenedor del formulario
         document.getElementById('formulario-container').style.display = 'none';
@@ -88,7 +88,7 @@ formulario.addEventListener('submit', (event) => {
 
 // Función para imprimir la tabla con los coeficientes y resultados
 let imprimir = (a, b, c, x1, x2) => {
-    let msg = "<table class='table-primary container  mt-4'>";
+    let msg = "<table class='table-primary container mt-4'>";
     msg += "<thead>";
     msg += "<tr>";
     msg += "<th class='table-dark'>Coeficiente a</th>";
